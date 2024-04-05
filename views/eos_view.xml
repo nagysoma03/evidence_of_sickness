@@ -4,12 +4,12 @@
         <field name="name">evidence.of.sickness.tree</field>
         <field name="model">evidence.of.sickness</field>
         <field name="arch" type="xml">
-            <tree>
-                <field name="companyName"/>
-                <field name="employee"/>
+            <tree editable='bottom'>
+                <field name="company_id"/>
+                <field name="employee_id"/>
                 <field name="month"/>
-                <field name="fileNumber"/>
-                <field name="deliveryDate"/>
+                <field name="file_number"/>
+                <field name="delivery_date"/>
                 <field name="comment"/>
                 <field name="status"/>
                 <field name="write_uid"/>
@@ -22,13 +22,16 @@
         <field name="model">evidence.of.sickness</field>
         <field name="arch" type="xml">
             <form>
-                <field name="companyName"/>
-                <field name="employee"/>
+                <field name="company_id"/>
+                <field name="employee_id"/>
                 <field name="month"/>
-                <field name="fileNumber"/>
-                <field name="deliveryDate"/>
+                <field name="file_number"/>
+                <field name="delivery_date"/>
                 <field name="comment"/>
-                <field name="status"/>
+                <field name="status" widget='selection_badge'
+                    decoration-warning="status == 'ok'"
+                    decoration-info="status == 'correct'"
+                    decoration-danger="status =='deliver'"/>
                 <field name="write_uid"/>
             </form>
         </field>
@@ -47,7 +50,7 @@
         name="Evidence of sickness"
         parent="project.menu_main_pm"
         action="eos_action"
-        sequence="0"/>
+        sequence="10"/>
 
 
     

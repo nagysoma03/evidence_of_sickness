@@ -1,3 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_color_code,access.color.code,evidence_of_sickness.model_evidence.of.sickness,base.group_user,1,0,0,0
-manage_color_code,manage.color.code,evidence_of_sickness.model_evidence.of.sickness,project.group_project_manager,1,1,1,1
+access_color_code,access.color.code,evidence_of_sickness.model_evidence_of_sickness,base.group_user,1,0,0,0
+manage_color_code,manage.color.code,evidence_of_sickness.model_evidence_of_sickness,project.group_project_manager,1,1,1,1
