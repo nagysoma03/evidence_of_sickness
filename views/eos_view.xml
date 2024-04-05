@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="eos_tree_view" model="ir.ui.view">
+        <field name="name">evidence.of.sickness.tree</field>
+        <field name="model">evidence.of.sickness</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="companyName"/>
+                <field name="employee"/>
+                <field name="month"/>
+                <field name="fileNumber"/>
+                <field name="deliveryDate"/>
+                <field name="comment"/>
+                <field name="status"/>
+                <field name="write_uid"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="eos_search_view" model="ir.ui.view">
+        <field name="name">evidence.of.sickness.search</field>
+        <field name="model">evidence.of.sickness</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="companyName"/>
+                <field name="employee"/>
+                <field name="month"/>
+                <field name="fileNumber"/>
+                <field name="deliveryDate"/>
+                <field name="comment"/>
+                <field name="status"/>
+                <field name="write_uid"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="eos_action" model="ir.actions.act_window">
+        <field name="name">Evidence of sickness</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">evidence.of.sickness</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="eos_search_view"/>
+        <field name="view_id" ref="eos_tree_view"/>
+    </record>
+
+    <menuitem id="eos_menu"
+        name="Evidence of sickness"
+        parent="project.menu_main_pm"
+        action="eos_action"
+        sequence="0"/>
+
+
+    
+</odoo>
